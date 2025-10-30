@@ -15,10 +15,8 @@ const protocol = window.location.protocol === "https:" ? "https" : "http";
 const port = protocol === "https" ? 5000 : 4000;
 
 const api = axios.create({
-
-    baseURL: import.meta.env.VITE_API_URL || `${protocol}://localhost:${port}`,
-    headers: { "Content-Type": "application/json" },
-    timeout: 10000, // 10 seconds
+  baseURL: import.meta.env.VITE_API_URL,
+  headers: { "Content-Type": "application/json" },
 });
 
 export default api;
