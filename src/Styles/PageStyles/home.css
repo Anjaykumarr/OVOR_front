@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background-color: #f9fafb;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding: 0 20px 50px;
+    gap: 40px;
+}
+
+.space {
+    height: 100px; 
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.districtgrid,
+.performance,
+.trend,
+.compare{
+    width: 100%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .home {
+        padding: 0 10px 30px;
+        gap: 30px;
+    }
+
+    .districtgrid,
+    .performance,
+    .trend,
+    .compare{
+        padding: 15px;
+    }
+
+    .space {
+        height: 80px;
+    }
+}

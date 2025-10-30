@@ -1,0 +1,147 @@
+﻿.district h1 {
+    text-align: center;
+    padding: 0;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.performance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    padding: 20px;
+    background: #f9fafb;
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+.card-icon {
+    font-size: 30px;
+    flex-shrink: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 4px 0;
+}
+
+.card-value {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+.card-trend {
+    font-size: 13px;
+    color: #27ae60;
+    margin-top: 2px;
+}
+
+@media (max-width: 1024px) {
+    .district h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 14px;
+    }
+
+    .card-icon {
+        font-size: 26px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-value {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .performance-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .district h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+        padding: 14px;
+    }
+
+    .card-icon {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-value {
+        font-size: 15px;
+    }
+
+    .card-trend {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .performance-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .district h1 {
+        font-size: 1.3rem;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card-icon {
+        font-size: 26px;
+    }
+
+    .card-title {
+        font-size: 13px;
+    }
+
+    .card-value {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,156 @@
+.compare-section {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+    .compare-section:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+.compare-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+}
+
+.compare-subtitle {
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.dropdown-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.district-select {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #f9fafb;
+    color: #1e293b;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+    .district-select:hover {
+        border-color: #94a3b8;
+    }
+
+    .district-select:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+    }
+
+.vs-text {
+    font-weight: 600;
+    font-size: 16px;
+    color: #475569;
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+    .compare-table th,
+    .compare-table td {
+        padding: 12px 10px;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .compare-table th {
+        background: #f1f5f9;
+        color: #1e293b;
+        font-weight: 600;
+    }
+
+    .compare-table tr:last-child td {
+        border-bottom: none;
+    }
+
+.highlight-green {
+    background-color: rgba(34, 197, 94, 0.15);
+    font-weight: 600;
+    color: #16a34a;
+    border-radius: 8px;
+}
+
+.highlight-red {
+    background-color: rgba(239, 68, 68, 0.15);
+    font-weight: 600;
+    color: #dc2626;
+    border-radius: 8px;
+}
+
+.legend {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #475569;
+}
+
+@media (max-width: 768px) {
+    .compare-section {
+        padding: 18px;
+        margin: 24px auto;
+    }
+
+    .compare-title {
+        font-size: 19px;
+    }
+
+    .compare-table th,
+    .compare-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .district-select {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .compare-title {
+        font-size: 17px;
+    }
+
+    .dropdown-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .vs-text {
+        display: none;
+    }
+
+    .legend {
+        font-size: 13px;
+    }
+
+    .compare-table {
+        font-size: 13px;
+    }
+}
