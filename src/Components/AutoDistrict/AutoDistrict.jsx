@@ -1,4 +1,4 @@
-﻿import location from "../../assets/location.png";
+import location from "../../assets/location.png";
 import { useEffect, useState } from "react";
 import { routes } from "../../services/routeServices/routeService";
 
@@ -41,13 +41,8 @@ function AutoDistrict() {
             try {
                 const data = await routes.getDistricts(latitude, longitude);
 
-                if (!data || data.length === 0) {
-                    setWarning("District data not available for your location...");
                     var districtData = data[0].district;
                     var stateData = data[0].state;
-                }
-
-                
 
                 if (isLandingPage || !manualSelected) {
                     localStorage.setItem("district", districtData);
@@ -56,7 +51,7 @@ function AutoDistrict() {
                     setDistrict(`${districtData}, ${stateData}`);
                 }
             } catch {
-                setError("No Data");
+                setError("District data not available for your location...");
             }
         }
 
